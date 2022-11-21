@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+		<!--
+			可以将js写到外部js文件中，然后通过script标签引入
+			写到外部文件中可以在不同的页面中同时引用，也可以利用浏览器的缓存机制
+			推荐使用
+		-->
+		<script type="text/javascript" src="js/01-.js"></script>
+		
+		<!--
+			script标签一旦用于引入外部文件，就不能编写代码了，即使编写了浏览器也会忽略
+			如有需要可以再创建一个新的script标签用于编写内部代码
+		-->
+		
+		<!-- 将js代码写入script标签中 -->
+		<!--<script>
+			/* 控制浏览器弹出一个警告框  
+			 * alert("warning!!!");
+			 */
+			
+			/* 向body中输入一个内容
+			 * document.write("我能显示出来");
+			 */
+			
+			/* 向控制台输入一个内容
+			 * console.log("看不见我！");
+			 */
+			
+		</script>-->
+	</head>
+	<body>
+		<!-- 不推荐使用 -->
+		<!--
+			可以将js代码编写到标签的onclick属性中
+		-->
+		<button onclick="alert('别点了！')">点我一下</button>
+		
+		<br />
+		<br />
+		
+		<!--
+			可以将js代码编写到超链接的href属性中，当点击超链接时会执行js代码
+		-->
+		<a href="javascript:alert('别点我！')">也点我一下呗</a>
+	</body>
+</html>
